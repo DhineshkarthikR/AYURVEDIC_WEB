@@ -26,6 +26,34 @@ const products = [
         price: 1100.00,
         image: "assets/oil.png", // Reusing image
         description: "Revitalize your scalp with our potent ancient Bhringraj formula."
+    },
+    {
+        id: 5,
+        name: "Kumkumadi Miraculous Serum",
+        price: 2499.00,
+        image: "assets/oil.png",
+        description: "The legendary 'Saffron Oil' prescribed for glowing, spotless complexion."
+    },
+    {
+        id: 6,
+        name: "Turmeric & Sandalwood Scrub",
+        price: 850.00,
+        image: "assets/cream.png",
+        description: "Exfoliate gently with the healing power of Turmeric and cooling Sandalwood."
+    },
+    {
+        id: 7,
+        name: "Rose & Hibiscus Mist",
+        price: 650.00,
+        image: "assets/oil.png",
+        description: "A refreshing hydration boost with pure distillations of Rose and Hibiscus."
+    },
+    {
+        id: 8,
+        name: "Rejuvenating Night Cream",
+        price: 1800.00,
+        image: "assets/cream.png",
+        description: "Repair skin cells overnight with this rich, ashwagandha-infused formulation."
     }
 ];
 
