@@ -211,6 +211,11 @@ function processOrder(e) {
     updateCartUI();
 }
 
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+
 // Initial Render
 document.addEventListener('DOMContentLoaded', () => {
     const productsContainer = document.getElementById('products-container');

@@ -46,3 +46,13 @@
 .about-content p:last-child {
     margin-bottom: 0;
 }
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 4rem 5%;
+    }
+
+    .about-card {
+        padding: 2rem;
+    }
+}
