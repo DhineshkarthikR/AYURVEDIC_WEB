@@ -132,10 +132,55 @@ function checkout() {
         alert("Your bag is empty!");
         return;
     }
-    alert("Thank you for your purchase! Your journey to wellness begins now.");
+
+    // Close cart modal
+    toggleCart();
+
+    // Calculate totals
+    const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+    // Update summary in checkout modal
+    document.getElementById('checkout-subtotal').innerText = '₹' + totalAmount.toFixed(2);
+    document.getElementById('checkout-final-total').innerText = '₹' + totalAmount.toFixed(2);
+
+    // Populate Order Summary List
+    const summaryList = document.getElementById('checkout-items-list');
+    summaryList.innerHTML = cart.map(item => `
+        <div class="summary-item">
+            <img src="${item.image}" alt="${item.name}">
+            <div class="summary-item-info">
+                <div class="summary-item-title">${item.name}</div>
+                <div class="summary-item-qty">Qty: ${item.quantity}</div>
+            </div>
+            <div class="summary-item-price">₹${(item.price * item.quantity).toFixed(2)}</div>
+        </div>
+    `).join('');
+
+    // Reset form and UI
+    document.querySelector('.checkout-form').style.display = 'block';
+    document.getElementById('order-success').style.display = 'none';
+    document.querySelector('.checkout-form').reset();
+
+    // Show modal
+    document.getElementById('checkout-modal').style.display = 'flex';
+}
+
+function closeCheckoutModal() {
+    document.getElementById('checkout-modal').style.display = 'none';
+}
+
+function processOrder(e) {
+    e.preventDefault();
+
+    // Check if form is valid (browser builtin) but we are preventing default
+
+    // Hide form, show success
+    document.querySelector('.checkout-form').style.display = 'none';
+    document.getElementById('order-success').style.display = 'block';
+
+    // Clear cart (in background)
     cart = [];
     updateCartUI();
-    toggleCart();
 }
 
 // Initial Render
