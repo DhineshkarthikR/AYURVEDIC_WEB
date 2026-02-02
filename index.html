@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VedaGlow - Premium Ayurvedic Wellness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">VedaGlow</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#philosophy">Philosophy</a></li>
+        </ul>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content glass-card">
+            <h1>Ancient Wisdom,<br>Modern Glow</h1>
+            <p>Experience the purest Ayurvedic formulations crafted for your inner and outer radiance.</p>
+            <a href="products.html" class="btn-glossy">Discover Collection</a>
+        </div>
+    </section>
+
+
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content glass-card">
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+            <h2>Your Wellness Bag</h2>
+            <div id="cart-items">
+                <p>Your bag is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="total">Total: ₹<span id="cart-total">0.00</span></div>
+                <button class="btn-glossy full-width" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 VedaGlow Ayurveda. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

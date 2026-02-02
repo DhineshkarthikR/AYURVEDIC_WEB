@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - VedaGlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Specific styles for products page */
+        .page-header {
+            padding-top: 120px;
+            padding-bottom: 2rem;
+            text-align: center;
+            background: linear-gradient(to bottom, #1a2621, transparent);
+        }
+
+        .page-header h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: #ddd;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">VedaGlow</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" style="color: var(--accent-color);">Products</a></li>
+            <li><a href="index.html#philosophy">Philosophy</a></li>
+        </ul>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Our Complete Collection</h1>
+        <p>Discover our full range of ethically sourced, ayurvedic formulations designed to heal and rejuvenate.</p>
+    </header>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="products-grid" id="products-container">
+            <!-- Products will be injected by JS -->
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content glass-card">
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+            <h2>Your Wellness Bag</h2>
+            <div id="cart-items">
+                <p>Your bag is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="total">Total: ₹<span id="cart-total">0.00</span></div>
+                <button class="btn-glossy full-width" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="product-detail-modal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <span class="close-modal" onclick="closeProductModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="Product Image">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Product Name</h2>
+                    <p id="modal-desc">Product Description</p>
+                    <div class="modal-price" id="modal-price">₹0.00</div>
+                    <button id="modal-add-btn" class="btn-glossy">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 VedaGlow Ayurveda. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
