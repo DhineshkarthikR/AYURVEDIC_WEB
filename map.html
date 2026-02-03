@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Us - VedaGlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">VedaGlow</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Map Section -->
+    <section class="map-page-section">
+        <div class="glass-card map-container">
+            <h1 class="section-title">Visit Our Sanctuary</h1>
+            <p class="map-description">Located in the heart of Kerala, our center offers a peaceful retreat for your
+                wellness journey.</p>
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.053358354672!2d76.32626507450849!3d9.980636290123853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKerala%2C%20India!5e0!3m2!1sen!2sus!4v1706880000000!5m2!1sen!2sus"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="map-details">
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kerala, India</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+91 987 654 3210</span>
+                </div>
+                <div class="detail-item">
+                    <i class="far fa-clock"></i>
+                    <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>VedaGlow</h3>
+                <p>Restoring balance through the timeless wisdom of Ayurveda. Pure, ethical, and sustainable wellness
+                    for body, mind, and soul.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop Collection</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#">support@vedaglow.com</a></li>
+                    <li><a href="#">+91 987 654 3210</a></li>
+                    <li><a href="#">Kerala, India</a></li>
+                </ul>
+            </div>
+
+            <!-- Map button in footer not needed here as we are ON the map page, but let's keep consistency or remove it? content usually stays content. User said remove location from index footer and add button. I'll probably just put the button here too for consistency or just the address. Let's keep the address column simple without the map/button since this IS the map page. Or just leave it as is without the map link since we are here. I'll leave the "Find Us" section but with text or no map. -->
+            <div class="footer-section footer-map-section">
+                <h3>Find Us</h3>
+                <a href="https://maps.google.com" target="_blank" class="btn-map-youtube">
+                    <i class="fas fa-map-marked-alt"></i> Open in Maps
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 VedaGlow Ayurveda. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal (needed for nav to work properly if clicked) -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content glass-card">
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+            <h2>Your Wellness Bag</h2>
+            <div id="cart-items">
+                <p>Your bag is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="total">Total: ₹<span id="cart-total">0.00</span></div>
+                <button class="btn-glossy full-width" onclick="location.href='index.html'">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
